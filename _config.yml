@@ -25,3 +25,6 @@ defaults:
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
+
+# Google Analytics
+google_analytics: "" # Add your GA4 Measurement ID here (G-XXXXXXXXXX)
