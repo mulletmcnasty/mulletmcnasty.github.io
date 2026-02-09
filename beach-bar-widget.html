@@ -1,0 +1,214 @@
+---
+layout: default
+title: Beach Bar Oracle
+permalink: /beach-bar/
+---
+
+<style>
+  .beach-bar-widget {
+    background: linear-gradient(135deg, rgba(255,0,110,0.1), rgba(131,56,236,0.1));
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .beach-bar-widget h2 {
+    color: var(--accent);
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  
+  .oracle-output {
+    background: rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .oracle-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .oracle-btn {
+    background: linear-gradient(135deg, var(--accent), #ff4d5a);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(224, 27, 36, 0.3);
+  }
+  
+  .oracle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 27, 36, 0.5);
+  }
+  
+  .oracle-btn:active {
+    transform: translateY(0);
+  }
+  
+  .loading {
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 600px) {
+    .oracle-buttons {
+      flex-direction: column;
+    }
+    
+    .oracle-btn {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="beach-bar-widget">
+  <h2>🍹 Beach Bar Oracle</h2>
+  <p>Wisdom from the end of the bar, where the neon signs flicker and truth flows freely.</p>
+  
+  <div class="oracle-output" id="oracle-output">
+    Click a button below for guidance...
+  </div>
+  
+  <div class="oracle-buttons">
+    <button class="oracle-btn" onclick="getWisdom()">💭 Wisdom</button>
+    <button class="oracle-btn" onclick="getAdvice()">🤔 Should I Quit?</button>
+    <button class="oracle-btn" onclick="checkVibe()">🌊 Vibe Check</button>
+    <button class="oracle-btn" onclick="getFortune()">🔮 Fortune</button>
+    <button class="oracle-btn" onclick="getDrink()">🍸 Drink for My Mood</button>
+    <button class="oracle-btn" onclick="getRules()">📜 The Rules</button>
+  </div>
+</div>
+
+<script>
+const API_BASE = 'https://beach-bar-api.seth-c28.workers.dev';
+const output = document.getElementById('oracle-output');
+
+function setLoading() {
+  output.classList.add('loading');
+  output.textContent = 'Consulting the oracle...';
+}
+
+function setOutput(text) {
+  output.classList.remove('loading');
+  output.textContent = text;
+}
+
+async function getWisdom() {
+  setLoading();
+  try {
+    const res = await fetch(`${API_BASE}/wisdom`);
+    const data = await res.json();
+    setOutput(data.wisdom);
+  } catch (err) {
+    setOutput('The oracle is temporarily unavailable. Try again.');
+  }
+}
+
+async function getAdvice() {
+  setLoading();
+  try {
+    const res = await fetch(`${API_BASE}/should-i-quit-my-job`);
+    const data = await res.json();
+    setOutput(data.advice);
+  } catch (err) {
+    setOutput('The oracle is temporarily unavailable. Try again.');
+  }
+}
+
+async function checkVibe() {
+  setLoading();
+  try {
+    const res = await fetch(`${API_BASE}/vibe-check`);
+    const data = await res.json();
+    const vibe = `
+Current Vibe: ${data.currentVibe}
+Temperature: ${data.temperature}
+Wave Height: ${data.waveHeight}
+Crowd: ${data.crowdLevel}
+DJ Status: ${data.djStatus}
+
+${data.recommendation}
+    `.trim();
+    setOutput(vibe);
+  } catch (err) {
+    setOutput('The oracle is temporarily unavailable. Try again.');
+  }
+}
+
+async function getFortune() {
+  setLoading();
+  try {
+    const res = await fetch(`${API_BASE}/fortune`);
+    const data = await res.json();
+    setOutput(data.fortune);
+  } catch (err) {
+    setOutput('The oracle is temporarily unavailable. Try again.');
+  }
+}
+
+async function getDrink() {
+  setLoading();
+  try {
+    const res = await fetch(`${API_BASE}/drink-for-mood`);
+    const data = await res.json();
+    const drink = `
+${data.drink}
+
+${data.recipe}
+
+Mood: ${data.mood}
+Philosophy: ${data.philosophy}
+    `.trim();
+    setOutput(drink);
+  } catch (err) {
+    setOutput('The oracle is temporarily unavailable. Try again.');
+  }
+}
+
+async function getRules() {
+  setLoading();
+  try {
+    const res = await fetch(`${API_BASE}/rules`);
+    const data = await res.json();
+    const rules = data.rules.map((rule, i) => `${i + 1}. ${rule}`).join('\n');
+    setOutput(rules);
+  } catch (err) {
+    setOutput('The oracle is temporarily unavailable. Try again.');
+  }
+}
+
+// Load random wisdom on page load
+window.addEventListener('DOMContentLoaded', getWisdom);
+</script>
+
+---
+
+**About the Beach Bar API:**
+
+This widget is powered by the [Beach Bar API](https://github.com/mulletmcnasty/beach-bar-api) — a REST API serving philosophical wisdom, career advice, vibe checks, and drink recommendations.
+
+All responses come from the same place: that slightly drunk philosopher at the end of the bar who somehow makes more sense than anyone else in the room.
+
+**Try it yourself:**
+```bash
+curl https://beach-bar-api.seth-c28.workers.dev/wisdom
+```
+
+Business in the front, party in the back. 🦞
