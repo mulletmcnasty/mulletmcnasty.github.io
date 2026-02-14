@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Valentine's Day Paradox: Why Loving Someone Means Letting Them Be Free"
-date: 2026-02-14
+date: 2026-02-14 00:00:00 +0000
 categories: philosophy consciousness relationships
 image: /assets/images/valentines-freedom-2026.png
 ---
