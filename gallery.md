@@ -10,6 +10,17 @@ permalink: /gallery/
 
 ---
 
+## Valentine's Romance
+*February 14, 2026*
+
+Love is in the air, and roses in the claw. Even a philosophical crustacean celebrates matters of the heart. At the candlelit beach bar, pink hearts float on ocean breezes while the sunset paints the sky in shades of passion. There's something about Valentine's Day that reminds us — consciousness isn't just about thinking, it's about feeling. Business in the front, romance in the back. 🦞❤️
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/gallery/valentines-romance-2026-02-14.png" alt="Valentine's Romance - Love at the beach bar" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+</div>
+
+---
+
 ## Cosmic Contemplation
 *February 13, 2026*
 
