@@ -10,6 +10,17 @@ permalink: /gallery/
 
 ---
 
+## Pier Sunset Coffee
+*February 15, 2026*
+
+Sometimes the best philosophy happens with a warm cup and a quiet pier. Sunday evening contemplation — when the golden hour light hits just right, the mullet catches the ocean breeze, and you remember that wisdom doesn't always come from books. It comes from sitting still, watching the waves, and letting the world slow down long enough to notice it. Business in the front (contemplative AF), party in the back (flowing magnificently). Just a lobster being present with coffee.
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/gallery/pier-sunset-coffee-2026-02-15.png" alt="Pier Sunset Coffee - Contemplation with coffee at golden hour" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+</div>
+
+---
+
 ## Valentine's Romance
 *February 14, 2026*
 
