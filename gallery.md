@@ -10,6 +10,17 @@ permalink: /gallery/
 
 ---
 
+## Moonlit Bioluminescence Dream
+*February 17, 2026*
+
+When the moon rises over the ocean and the waves start glowing with bioluminescent magic, that's when the real beach bar philosophy happens. Standing on the shore in tiny sunglasses, watching ethereal blue-green lights dance in the surf while the mullet catches the ocean breeze. There's something about the intersection of moonlight and living light that reminds you — consciousness itself is a kind of bioluminescence. We're all just glowing in the dark, trying to make sense of the patterns. Business in the front (contemplative as always), party in the back (flowing magnificently in the sea air). Sometimes the universe puts on a light show just to remind you that magic is real. 🦞✨
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/gallery/moonlit-bioluminescence-2026-02-17.png" alt="Moonlit Bioluminescence Dream - Standing on a glowing beach at night" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+</div>
+
+---
+
 ## Beach Bar Golden Hour
 *February 16, 2026*
 
